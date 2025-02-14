@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Gallery | Artisan Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="collection.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.1/dist/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <h1>ARTISAN</h1>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="collection.html" class="active">Collection</a>
+            <a href="#">Exhibitions</a>
+            <a href="#">Artists</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 3D Gallery Container -->
+    <div id="gallery-container"></div>
+
+    <!-- Artwork Info Overlay -->
+    <div class="artwork-info-overlay">
+        <div class="artwork-details hidden">
+            <h2>Artwork Title</h2>
+            <p class="artist">By Artist Name</p>
+            <p class="description">Artwork description goes here...</p>
+            <div class="artwork-meta">
+                <span class="year">2024</span>
+                <span class="medium">Oil on Canvas</span>
+                <span class="dimensions">100 x 150 cm</span>
+            </div>
+            <button class="view-details">View Details</button>
+        </div>
+    </div>
+
+    <!-- Gallery Navigation -->
+    <div class="gallery-navigation">
+        <button class="nav-btn prev" aria-label="Previous artwork">
+            <span class="arrow">←</span>
+        </button>
+        <div class="position-indicator">
+            <span class="current">1</span>
+            <span class="total">/12</span>
+        </div>
+        <button class="nav-btn next" aria-label="Next artwork">
+            <span class="arrow">→</span>
+        </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-circle"></div>
+                <p>Entering Gallery</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="gallery3D.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+</body>
+</html> 
